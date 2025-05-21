@@ -281,6 +281,11 @@ async def main_page():
                 with delete_status_area:
                     ui.label("Enter the Authorization ID to remove and click 'Delete Authorization'.").classes("text-sm text-gray-500 dark:text-gray-400")
 
+    # --- Footer ---
+    with ui.footer().classes("p-2 text-center"):
+        ui.label("created by avlind@").classes("text-xs text-gray-700 dark:text-white")
+
+
     # --- Logic for Create Authorization ---
     async def start_create_authorization():
         project_id = project_input.value
