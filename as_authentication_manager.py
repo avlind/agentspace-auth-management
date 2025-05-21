@@ -45,7 +45,7 @@ LOG_FILE_NAME = "activity.log"
 script_dir = os.path.dirname(os.path.abspath(__file__))
 log_file_path = os.path.join(script_dir, LOG_FILE_NAME)
 
-logger = logging.getLogger("WebUIActivity")
+logger = logging.getLogger("Activity")
 logger.setLevel(logging.INFO)
 
 # Use TimedRotatingFileHandler for daily log rotation
@@ -258,7 +258,7 @@ async def main_page():
         # --- Create Authorization Tab Panel ---
         with ui.tab_panel(create_tab_button):
             with ui.column().classes("w-full p-4 gap-3"): # Reduced gap slightly
-                ui.label("Create New Agentspace Authorization").classes("text-xl font-semibold mb-2")
+                ui.label("Create New Agentspace OAuth Authorization").classes("text-xl font-semibold mb-2")
                 auth_id_create_input = ui.input("Authorization ID", placeholder="e.g., my-google-oauth-client").props("outlined dense clearable").classes("w-full")
                 client_id_input = ui.input("OAuth Client ID").props("outlined dense clearable").classes("w-full")
                 client_secret_input = ui.input("OAuth Client Secret", password=True, password_toggle_button=True).props("outlined dense clearable").classes("w-full")

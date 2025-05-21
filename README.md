@@ -53,7 +53,7 @@ The script requires your Google Cloud Project ID. You can provide this in two wa
 Once prerequisites are met and dependencies are installed, run the script:
 
 ```bash
-python webui_as_authentication.py
+python as_authentication_manager.py
 ```
 
 The web UI will start, typically accessible at `http://localhost:8081`. Open this URL in your web browser.
@@ -62,6 +62,7 @@ The web UI will start, typically accessible at `http://localhost:8081`. Open thi
 
 1.  Enter your GCP Project ID in the configuration section (this field might be pre-filled if set via `.env` or environment variable).
 2.  Navigate between the "Create Authorization" and "Delete Authorization" tabs.
+3.  Currently, the user must remember/track the authorization id(s) they have created, if they wish to delete them later. There is no GET or `list` method(s) for Authorizations as of 21 May 2025.
 3.  Fill in the required details for the desired action and click the corresponding button.
 4.  Status and results will be displayed in the status area below the buttons.
-5.  Check `webui_activity.log` in the script's directory for detailed logs of API calls and responses.
+5.  Check `activity.log` in the script's directory for detailed logs of API calls and responses.
